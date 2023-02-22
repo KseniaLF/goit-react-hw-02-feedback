@@ -1,16 +1,20 @@
+import Counter from './Counter';
+// import Counter from './Counter/Counter';
+import { Layout } from './Constants/Layout';
+import { GlobalStyle } from './Constants/GlobalStyle';
+import { Dropdown } from './DropDown/Dropdown';
+
+import { Feedback } from './Feedback/Feedback';
+
 export const App = () => {
   return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101'
-      }}
-    >
-      React homework template
-    </div>
+    <Layout>
+      <GlobalStyle />
+      {/* <Counter initialValue={10} /> */}
+
+      {/* <Dropdown /> */}
+
+      <Feedback />
+    </Layout>
   );
 };
