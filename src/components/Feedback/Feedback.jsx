@@ -24,6 +24,7 @@ export class Feedback extends Component {
     //   return console.log(this.state);
     return this.state.good + this.state.neutral + this.state.bad;
   };
+
   countPositiveFeedbackPercentage = () => {
     return (
       this.countTotalFeedback() &&
@@ -36,7 +37,10 @@ export class Feedback extends Component {
     return (
       <FeedbackContainer>
         <Section title={'Please leave feedback'}>
-          <FeedbackOptions onLeaveFeedback={this.changeState}></FeedbackOptions>
+          <FeedbackOptions
+            options={['good', 'neutral', 'bad']}
+            onLeaveFeedback={this.changeState}
+          ></FeedbackOptions>
         </Section>
 
         {this.countTotalFeedback() ? (

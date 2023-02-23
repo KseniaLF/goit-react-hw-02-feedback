@@ -10,6 +10,7 @@ export const FeedbackButtons = styled.div`
     margin-right: 10px;
     box-shadow: 0px 0px 5px black;
     border-radius: 8px;
+    text-transform: capitalize;
     transition: background-color 200ms;
     :hover {
       background-color: rgb(167, 202, 244);
