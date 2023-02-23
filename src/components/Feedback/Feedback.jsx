@@ -15,19 +15,9 @@ export class Feedback extends Component {
     bad: 0,
   };
 
-  handleGood = () => {
+  changeState = value => {
     this.setState(prevState => {
-      return { good: prevState.good + 1 };
-    });
-  };
-  handleNeutral = () => {
-    this.setState(prevState => {
-      return { neutral: prevState.neutral + 1 };
-    });
-  };
-  handleBad = () => {
-    this.setState(prevState => {
-      return { bad: prevState.bad + 1 };
+      return { [value]: prevState[value] + 1 };
     });
   };
 
@@ -47,13 +37,7 @@ export class Feedback extends Component {
     return (
       <FeedbackContainer>
         <Section title={'Please leave feedback'}>
-          <FeedbackOptions
-            onLeaveFeedback={{
-              handleGood: this.handleGood,
-              handleNeutral: this.handleNeutral,
-              handleBad: this.handleBad,
-            }}
-          ></FeedbackOptions>
+          <FeedbackOptions onLeaveFeedback={this.changeState}></FeedbackOptions>
         </Section>
 
         {this.countTotalFeedback() ? (
