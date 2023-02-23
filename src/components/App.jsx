@@ -10,9 +10,6 @@ export const App = () => {
   return (
     <Layout>
       <GlobalStyle />
-      {/* <Counter initialValue={10} /> */}
-
-      {/* <Dropdown /> */}
 
       <Feedback />
     </Layout>

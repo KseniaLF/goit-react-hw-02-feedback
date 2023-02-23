@@ -1,4 +1,3 @@
-import { type } from '@testing-library/user-event/dist/type';
 import { Component } from 'react';
 
 import { Statistics } from './Statistics/Statistics';
