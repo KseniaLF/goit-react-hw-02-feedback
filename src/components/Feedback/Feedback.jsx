@@ -14,9 +14,9 @@ export class Feedback extends Component {
     bad: 0,
   };
 
-  changeState = value => {
+  changeState = name => {
     this.setState(prevState => {
-      return { [value]: prevState[value] + 1 };
+      return { [name]: prevState[name] + 1 };
     });
   };
 
@@ -54,7 +54,7 @@ export class Feedback extends Component {
             />
           </Section>
         ) : (
-          <Notification message={'There is no feedback'}></Notification>
+          <Notification message="There is no feedback"></Notification>
         )}
       </FeedbackContainer>
     );
